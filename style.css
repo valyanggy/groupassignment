@@ -1,0 +1,108 @@
+html,
+body {
+  height: 100%;
+}
+
+
+body {
+    margin: 20px;
+    background-color: WhiteSmoke;
+    text-align: center;
+    max-height: 100%;
+  }
+
+  .container {
+    display: flex;
+    max-height:fit-content;
+    height:60%;
+    width:60%;
+    padding-top: 4%;
+    margin:auto;
+  }
+  
+  
+  .box {
+    display: inline-flex;
+    flex-grow: 2;
+    flex-direction: column;
+    margin:5%;
+  }
+  
+  .row {
+    min-height: 100px;
+    display: flex;
+    flex-wrap: row;
+    justify-content: space-evenly;
+    align-items: center;
+  
+  }
+  
+  
+  .circle {
+    background-color: rgb(25, 153, 110);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    animation: pulse 4s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: #5abe86;
+    }
+    25% {
+      background-color: #a6e7c2;
+    }
+    50% {
+      background-color: #1f5336;
+    }
+    100% {
+        background-color: #5abe86;
+      }
+  }
+
+
+  #cut-diamond {
+    border-style: solid;
+    border-color: transparent transparent rgb(173, 102, 102) transparent;
+    border-width: 0 0.7rem 0.7rem 0.7rem;
+    height: 0;
+    width: 1.5rem;
+    box-sizing: content-box;
+    position: relative;
+    margin: 20px 0 50px 0;
+  }
+  #cut-diamond:after {
+    content: "";
+    position: absolute;
+    top: 0.7rem;
+    left: -0.7rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: rgb(173, 102, 102) transparent transparent transparent;
+    border-width: 2rem 1.5rem 0 1.5rem;
+  }
+  
+
+  /* Reminders */
+  
+  .reminders {
+    background-color: Khaki;
+    display: inline-flex;
+    flex-grow: 2;
+  }
+  
+  .reminders h3 {
+    width: 100%;
+    margin: 10px;
+    color: black;
+    line-height: 90px;
+    font-size: 24px;
+  }
+  
+  /* Footer */
+  
+  footer {
+    font-size: 24px;
+  }
