@@ -16,7 +16,7 @@ body {
     max-height:fit-content;
     height:60%;
     width:60%;
-    padding-top: 4%;
+    padding-top: 4rem;
     margin:auto;
   }
   
@@ -39,11 +39,11 @@ body {
   
   
   .circle {
-    background-color: rgb(25, 153, 110);
+    background-color: #5abe86;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    animation: pulse 4s infinite;
+    animation: pulse 5s infinite ease-in-out;
   }
 
   @keyframes pulse {
@@ -60,6 +60,54 @@ body {
         background-color: #5abe86;
       }
   }
+
+  .secondary {
+    background-color: #1f5336;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    animation: secondary-pulse 5s infinite ease-in-out;
+  }
+
+  @keyframes secondary-pulse {
+    0% {
+      background-color:  #1f5336;
+    }
+    25% {
+      background-color: #5abe86;
+    }
+    50% {
+      background-color: #a6e7c2;
+    }
+    100% {
+        background-color: #1f5336;
+      }
+  }
+
+  .third {
+    background-color: #a6e7c2;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    animation: third-pulse 5s infinite ease-in-out;
+  }
+
+  @keyframes third-pulse {
+    0% {
+      background-color:  #a6e7c2;
+    }
+    25% {
+      background-color: #5abe86;
+    }
+    50% {
+      background-color: #1f5336;
+    }
+    100% {
+        background-color: #a6e7c2;
+      }
+  }
+
+
 
 
   #cut-diamond {
@@ -81,28 +129,21 @@ body {
     height: 0;
     border-style: solid;
     border-color: rgb(173, 102, 102) transparent transparent transparent;
-    border-width: 2rem 1.5rem 0 1.5rem;
+    border-width: 2rem 1.5rem 0 1.4rem;
   }
   
-
-  /* Reminders */
-  
-  .reminders {
-    background-color: Khaki;
-    display: inline-flex;
-    flex-grow: 2;
+ #cut-diamond {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
   }
-  
-  .reminders h3 {
-    width: 100%;
-    margin: 10px;
-    color: black;
-    line-height: 90px;
-    font-size: 24px;
-  }
-  
-  /* Footer */
-  
-  footer {
-    font-size: 24px;
+ #cut-diamond:hover, #cut-diamond:focus, #cut-diamond:active {
+    -webkit-transform: scale(1.4) rotate(5deg);
+    transform: scale(1.4) rotate(5deg);
   }
